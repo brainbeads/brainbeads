@@ -77,6 +77,13 @@
 
 
 /*** Navbar ***/
+
+.navbar-brand img {
+    height: 70px; /* Adjust height as needed */
+    width: auto;  /* Ensures the aspect ratio is maintained */
+    object-fit: contain;
+}
+
 .navbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
