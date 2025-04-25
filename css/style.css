@@ -1,4 +1,27 @@
 /********** Template CSS **********/
+
+.blue-text {
+    color: rgb(18, 175, 180);  /* Makes text white */
+    list-style-type: disc; /* Keeps default bullet */
+    font-weight: bold;
+    font-size: large;
+}
+.blue-text li::marker{
+    color: green;
+    font-size:1.9em;
+}
+
+.custom-list {
+    list-style: none; /* Remove default bullets */
+    padding-left: 3;
+    padding: auto;
+}
+
+.yellow-text {
+    flood-color: #181d38;
+    color: yellow;
+}
+
 :root {
     --primary: #06BBCC;
     --light: #F0FBFC;
@@ -438,4 +461,14 @@
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav a.active{
+    color: #25D366;
+    font-weight: nold;
+    border-bottom: 2px solid #25D366;
 }

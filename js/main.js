@@ -107,3 +107,37 @@
     
 })(jQuery);
 
+
+document.addEventListener("DOMContentLoaded",
+function () {
+fetch('header.html')
+.then(Response => Response.text())
+.then(data => { 
+    document.getElementById('header').innerHTML= data;
+    });
+
+fetch('footer.html')
+.then(Response => Response.text())
+.then(data => {
+    document.getElementById('footer').innerHTML= data;
+    });
+});
+
+// active navbar option on click 
+
+document.addEventListener("DOMContentLoaded",
+    function () {
+        const path = window.location.pathname.split("/").pop();
+
+        const navLinks = document.querySelectorAll('nav a.nav-link');
+
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+
+            if(href === path || (href === 'index.html' && (path === '' || path === 'index.html'))){
+                link.classList.add('active');
+        }
+    });
+});
+
+
